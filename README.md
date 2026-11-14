@@ -103,7 +103,7 @@ The following examples illustrate target-word usage across the three periods. Pu
 
 The ST-WSD dataset combines original research annotations with material derived from third-party corpora and dictionaries. The original source materials remain subject to their respective providers' terms; preprocessing does not itself establish redistribution permission.
 
-- **Historical contexts (T1 and T2):** Selected CCOHA-derived examples are shown in preprocessed form, with punctuation removed and word order preserved. 
+- **Historical contexts (T1 and T2):** Selected CCOHA-derived examples are shown in preprocessed form, with word order preserved. 
 - **Twitter contexts (T3):** The released dataset uses Tweet IDs for reconstruction, subject to the X/Twitter platform terms. The illustrative tweet-derived examples displayed above are excerpts, not a complete Twitter corpus; any public display of tweet text must also comply with the relevant terms.
 - **Dictionary sources:** Third-party dictionary entries and definitions retain their original rights and licensing conditions.
 - **Synthetic training data:** See the separate CC BY 4.0 licensing notice for the synthetic training file, if applicable to this repository and formally adopted by the rights holder.
