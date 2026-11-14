@@ -1,4 +1,3 @@
-
 ST-WSD Dataset — Licence
 
 Copyright (c) 2026 Afnan Mohammed Aloraini and co-authors
@@ -8,15 +7,16 @@ Creative Commons Attribution 4.0 International licence (CC BY 4.0).
 Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
 
 This licence covers:
-- the sense annotations (the "Sense" column in each data file)
-- the instance identifiers (the "number" column) and Tweet IDs
+- the sense annotations (the "true_label" column)
+- the instance identifiers (the "instance_id" column) and the Tweet IDs
+  (the "tweet_id" column)
 - the sense labels and sense identifiers in the unified sense inventory,
   and any sense descriptions written by the authors in their own words
 - the annotation guidelines
 - the synthetic training data (Synthetic Training Data.zip)
 
 Excluded third-party content (NOT covered by this licence):
-- The "Text" column. CCOHA-derived contexts (T1: 1980–1999; T2: 2000–2009)
+- The "text" column. CCOHA-derived contexts (T1: 1980–1999; T2: 2000–2009)
   are provided in lemmatised, randomised form only; the underlying corpus
   remains subject to the COHA terms of use (Davies, 2012).
 - Twitter content (T3: 2010–2020) is not redistributed. Only Tweet IDs are
