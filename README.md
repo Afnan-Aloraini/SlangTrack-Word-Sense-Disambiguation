@@ -1,4 +1,3 @@
-
 # 🧠 SlangTrack Word Sense Disambiguation (ST-WSD) Dataset
 
 > A diachronic dataset for **Word Sense Disambiguation** in both slang and standard English across multiple decades.
@@ -52,7 +51,7 @@ Words were selected based on:
 
 ## 📂 Data Sources and Collection
 
-- **COHA (Corpus of Historical American English)** – for T1 and T2.
+- **CCOHA (Clean Corpus of Historical American English)** – for T1 and T2.
 - **Twitter corpus (2010–2020)** – for T3.
 - **Sense inventories** were built from:
   - Oxford English Dictionary (standard senses).
@@ -62,7 +61,7 @@ Words were selected based on:
 
 ## 📊 Data Statistics
 
-**Instance counts across timelines (Reported Total = 12,712):**
+**Instance counts across timelines (Total = 12,712):**
 
 | Word | T1 | T2 | T3 | TOTAL |
 |---|---:|---:|---:|---:|
@@ -71,12 +70,27 @@ Words were selected based on:
 | Chronic | 482 | 380 | 823 | 1685 |
 | Climber | 75 | 50 | 517 | 642 |
 | Cucumber | 74 | 85 | 892 | 1051 |
-| Eat | 975 | 995 | 1000 | 2970 |
+| Eat | 975 | 995 | 1062 | 3032 |
 | Germ | 112 | 70 | 650 | 832 |
 | Mammy | 172 | 22 | 876 | 1070 |
 | Rodent | 101 | 67 | 905 | 1073 |
 | Salty | 214 | 165 | 887 | 1266 |
 | **TOTAL** | **2369** | **2047** | **8296** | **12712** |
+
+---
+
+## 🗂️ Data Format
+
+`SlangTrack_ST_WSD_public.csv` contains one row per instance:
+
+| Column | Description |
+|---|---|
+| `instance_id` | Stable instance identifier |
+| `text` | Lemmatised CCOHA-derived context (T1 and T2 only; empty for T3) |
+| `tweet_id` | Tweet ID for reconstruction (T3 only; empty for T1 and T2) |
+| `true_label` | Gold-standard sense annotation |
+| `word` | Target word |
+| `time_period` | T1, T2, or T3 |
 
 ---
 
@@ -96,20 +110,21 @@ The texts below are a small number of **illustrative excerpts only**, shown to c
 | **Mammy** | their clothe come from a fashionable modiste but I always say oh this be a little something Mammy run up for I so when I walk into the great hall at Winston I Mammy s there wasn t any mammy to it the word burst from Dessa she know even as she say it what the white woman mean Mammy be a servant a slave Dorcas who have nurse the white woman just as Carrie have nurse Young Mistress s baby before it die but goad by the white woman s open mouth | the eye light with laughter yet for a moment Rufel sense some hesitation feel the dark eye question May I be it all right Disturbed by the servant s obvious assurance rufel be relieve by that hint of uncertainty it make the woman seem more natural and herself a bit more comfortable Rufel have be lonely have feel herself ugly and awkward Mammy talk with she admire her hair and rather full lipped smile and show she how to walk erectly she praise where Mrs Car | The amount of clothes I just folded made me feel like I m a mammy back in the deep South b never againnn |
 | **Rodent** | which be the disguise of the man who will love you that would be a rodent then fail that Charlene continue ignore Trudi I would like a cat as big as a man a cat as big as a man Trudi frown try to picture a man sized cat yes imagine if man have fur the waitress ask they if they want more of the weak green tea for myself the waitress say uninvited I prefer dog Charlene and Trudi swoon with delight at the idea of dog instead | hello Mrs Houston it s Keefer yes the reason I m call be a little strange Mrs Houston but there s this old book I have back in Germany in the 1600 it tell about a thing call the Das Teufel Nagetier Das what Claire who be it Das Teufel Nagetier I be go to tell you about it today but Mr Houston didn t seem much in the mood for listen who be that it s late well what be this Das Teufel whatever it be it translate into the devil rodent | My sister smells like a rodent And I m ten feet away from her |
 | **Salty** | the cotton of his colorful sport shirt still seem load near its tensile strength where it stretch over his middle Franks roll the stump of a dead cigar from one corner of his mouth to the other and wink at Jake with his shoulder throw back and his genial air of self assurance and command Franks remind Jake of the salty chief petty officer he have grow to respect and admire when he be a junior officer Franks certainly be no modern naval officer or chief in mufti not with that gut | he tell she what his mother have arrange the job in Nethermede s kitchen the room in the sophomore dormitory and that be what she think of of he kiss she against the refrigerator and his salty knowingness slide onto her tongue and so against every other obvious next step Cody s family have present to she the job as an assistant cook at Nethermede Academy seemingly ill suit though it be pleased she of course she suspect as little as he | I just can t wait for 9 o clock that s when MY unranked terrible salty team plays I couldn t care less about the UL game bbn gocats |
+
 ---
 
-## 🔖 License and Source-Data Restrictions
+## 🔖 License
 
-The ST-WSD dataset combines original research annotations with material derived from third-party corpora and dictionaries. The original source materials remain subject to their respective providers' terms; preprocessing does not itself establish redistribution permission.
+Our original contributions are licensed under CC BY 4.0 (see [LICENSE](LICENSE)): the sense annotations (`true_label`), the instance identifiers (`instance_id`), the Tweet IDs (`tweet_id`), the sense inventory, the annotation guidelines, and the synthetic training data.
 
-- **Historical contexts (T1 and T2):** Selected CCOHA-derived examples are shown in preprocessed form, with word order preserved. 
-- **Twitter contexts (T3):** The released dataset uses Tweet IDs for reconstruction, subject to the X/Twitter platform terms. The illustrative tweet-derived examples displayed above are excerpts, not a complete Twitter corpus; any public display of tweet text must also comply with the relevant terms.
-- **Dictionary sources:** Third-party dictionary entries and definitions retain their original rights and licensing conditions.
-- **Synthetic training data:** See the separate CC BY 4.0 licensing notice for the synthetic training file, if applicable to this repository and formally adopted by the rights holder.
+Third-party content is excluded from this licence:
 
+- **T1 and T2 (CCOHA):** the `text` column is released in lemmatised, randomised form only, following SemEval-2020 Task 1; the underlying corpus remains subject to the COHA terms of use (Davies, 2012).
+- **T3 (Twitter):** tweet texts are not redistributed; only Tweet IDs are released, for retrieval via the authorised X API under its developer terms.
+- **Dictionaries:** no verbatim dictionary entries or definitions are redistributed; these sources remain subject to their respective copyright.
 
 ---
 
 ## 📥 Download & Citation
 
-To access the dataset, visit the [SlangTrack Repository](https://github.com/SlangTrack/SlangTrack-ST-Dataset-Word-Sense-Disambiguation-WSD-/blob/main/SlangTrack-ST-Dataset-Word-Sense-Disambiguation-WSD.csv).
+The dataset file is [SlangTrack_ST_WSD_public.csv](SlangTrack_ST_WSD_public.csv) in this repository. If you use this dataset, please cite the BD-LSC paper.
